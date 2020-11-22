@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <title>.:: Bancodoc ::.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bancodoc - É um sistema que permite o controle de documentos trabalhistas, todos os documentos funcionais passam a ser armazenados e monitorados digitalmente.">
+    <meta name="author" content="Inforweb Sistemas e Serviços">
+
+    <!-- Le styles -->
+    <link href="App_Themes/Padrao/css/bootstrap.css" rel="stylesheet">
+    <!-- CLASSE DE ESTILO CUSTOMIZADA -->
+    <link href="App_Themes/Padrao/css/bootstrap-bancodoc.css" rel="stylesheet">
+    
+    <style type="text/css">
+      body {
+        padding-top: 90px;
+        padding-bottom: 10px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+
+      @media (max-width: 980px) {
+        /* Enable use of floated navbar text */
+        .navbar-text.pull-right {
+          float: none;
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+      }
+    </style>
+    <link href="App_Themes/Padrao/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="App_Themes/Padrao/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="App_Themes/Padrao/img/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="App_Themes/Padrao/img/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="App_Themes/Padrao/img/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="App_Themes/Padrao/img/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="App_Themes/Padrao/img/favicon.png">
+                                   <script type="text/javascript">
+<!--
+function MM_goToURL() { //v3.0
+  var i, args=MM_goToURL.arguments; document.MM_returnValue = false;
+  for (i=0; i<(args.length-1); i+=2) eval(args[i]+".location='"+args[i+1]+"'");
+}
+//-->
+                                   </script>
+</head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- INSERIDO POR GIL.BELEI EM 13.05..2013 -->
+          <div id="logomarca" class="visible-desktop">
+          	<a href="Default.html" target="_top"><img src="App_Themes/Padrao/img/LogoBancodoc.png" alt="Bancodoc" border="0" longdesc="http://www.bancodoc.com.br"></a>
+          </div>
+          <div id="logomarca-mini" class="hidden-desktop">
+          	<a href="Default.html" target="_top"><img src="App_Themes/Padrao/img/LogoMiniBancodoc.png" alt="Bancodoc" border="0" longdesc="http://www.bancodoc.com.br"></a>
+          </div>
+          <!-- ALTERADO POR GIL.BELEI EM 13.05..2013 
+          <a class="brand" href="Default.html">Bancodoc</a>-->
+          <div class="nav-collapse collapse">
+            <div class="btn-group pull-right visible-desktop">
+              <a class="btn btn-inverse" href="#"><i class="icon-user icon-white"></i> {Nome do Usuário}</a>
+              <a class="btn btn-inverse dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="AlterarDadosAcesso.html"><i class="icon-pencil"></i> Editar</a></li>
+                <li><a href="Default.html"><i class="icon-ban-circle"></i> Sair</a></li>
+                <li class="divider"></li>
+                <li><a href="Default.html">Home</a></li>
+              </ul>
+            </div>               
+            
+            <ul class="nav">
+            
+            <li class="dropdown ">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Segurança <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="ManutenirUsuario.html">Usuários</a></li>
+                  <li><a href="CofigurarAgendaTrabalho.html">Agenda de Trabalho</a></li>
+                  <li><a href="ConfigurarPerfilAcesso.html">Perfis de Acesso</a></li>
+                  <li class="divider"></li>
+                  <li><a href="ManutenirModulo.html">Módulos</a></li>
+                  <li><a href="ManutenirFuncionalidade.html">Funcionalidades</a></li>
+                  <li><a href="ManutenirAcao.html">Ações</a></li>
+                  <li><a href="ManutenirObjeto.html">Objetos</a></li>
+                </ul>
+              </li>
+              
+              <li class="dropdown ">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Configurações <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="ManterParametro.html">Tabelas de Parâmetros</a></li>
+                  <li><a href="ManterOcorrencia.html">Tabelas Auxíliares</a></li>
+                  <li><a href="ManterNotificacao.html">Notificações</a></li>
+                </ul>
+              </li>
+              
+              
+              
+              <li class="dropdown hidden-desktop">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">{Nome do Usuário}<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="AlterarDadosAcesso.html"><i class="icon-pencil"></i> Editar</a></li>
+                    <li><a href="Default.html"><i class="icon-ban-circle"></i> Sair</a></li>
+                </ul>
+              </li>
+              
+            </ul>            
+          </div><!--/.nav-collapse -->
+          
+        </div><!-- /container-fluid-->
+      </div><!-- /navbar-inner -->
+     	 <!-- INSERIDO POR GIL.BELEI EM 13.05..2013 -->
+      	<div class="row-fluid visible-desktop">
+        	<div class="span9">
+              <ul class="breadcrumb">
+                <li><a href="Default.html">Bancodoc</a> <span class="divider">»</span></li>
+                  <li><a href="Seguranca.html">Segurança</a> <span class="divider">»</span></li>
+                  <li class="active">Agendas de Trabalho</li>
+                </ul>	
+            </div>
+            <div class="span3">
+            	
+            	<div class="span6">13 de maio de 2013 17:47</div>
+          	</div>
+        </div>
+    </div> <!-- /navbar navbar-inverse navbar-fixed-top -->
+    
+    <!-- Part 1: Wrap all page content here -->
+	<div id="wrap">
+	<form action="CadastrarAgendaTrabalho.html" method="post">    
+    <div class="container-fluid"> <!-- Ou class="container-fluid" -->
+      <div class="row-fluid">
+        <h1 class="hidden-phone">Agendas de Trabalho</h1>
+        <p class="hidden-phone">Utilize os campos abaixo para filtrar as agendas de trabalho cadastradas no sistema e tenha acesso aos seus dados para edição ou cadastro.</p>
+        <fieldset>
+        <legend>Formulário de Busca</legend>
+            
+            <div class="row-fluid">
+                <div class="span6"><input type="text" class="input-xxlarge search-query" placeholder="Busca…"></div>
+                <div class="span6"><button type="button" class="btn btn-primary"><i class="icon-search icon-white"></i> Buscar</button>
+                <button class="btn" type="submit">Novo Registro</button></div>
+            </div><!-- /row-fluid --> 
+            
+            <hr/>
+            
+            <div style="margin-bottom: 18px;" class="tabbable">
+              <!-- Títulos dos paineis -->
+              <ul class="nav nav-tabs">              	
+                <li class="active"><a href="#tab1" data-toggle="tab">Ativos</a></li>
+                <li><a href="#tab2" data-toggle="tab">Inativos</a></li>
+                
+                <!-- Filtro de Classificação -->
+                <li class="dropdown pull-right hidden-phone">               
+                    <a class="dropdown-toggle" href="#" data-toggle="dropdown">Classificar por <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">None</a></li>
+                      <li><a href="#">Data de cadastro</a></li>
+                    </ul>
+                </li><!-- /Filtro de Classificação --> 
+              </ul> <!-- /Títulos dos paineis -->
+              
+              <!-- Painéis -->
+              <div style="padding-bottom: 9px; border-bottom-color: rgb(221, 221, 221); border-bottom-width: 1px; border-bottom-style: solid;" class="tab-content">
+                <div id="tab1" class="tab-pane  active">
+                  <p class="hidden-phone "><label><strong>1</strong> de <strong>1</strong> página de um total de <strong>3</strong> registros.</label></p>
+                  <div class="row-fluid marketing">
+                    <table class="table table-hover table-striped hidden-desktop">
+                      <tbody>
+                        <tr>
+                          <td>
+                              <div class="span12">
+                                  <div class="span12"><p class="lead"> Padrão</p></div>
+                                  <div class="span12">
+                                  	<label>Períodos</label>
+                                      <div class="span5"><strong>Segunda-Feira</strong>
+                                      <p>08:00 a 12:00<br/>13:00 a 17:00</p></div>
+                                      <div class="span5"><strong>Terça-Feira</strong>
+                                      <p>08:00 a 12:00<br/>13:00 a 17:00</p></div>
+                                      <div class="span5"><strong>Quarta-Feira</strong>
+                                      <p>08:00 a 12:00<br/>13:00 a 17:00</p></div>
+                                      <div class="span5"><strong>Quinta-Feira</strong>
+                                      <p>08:00 a 12:00<br/>13:00 a 17:00</p></div>
+                                      <div class="span5"><strong>Sexta-Feira</strong>
+                                      <p>08:00 a 12:00<br/>13:00 a 17:00</p></div>
+                                      <div class="span5"><strong>Sábado</strong>
+                                      <p>08:00 a 12:00</p></div>
+                                  </div>
+                                  <div class="span12"><a class="btn btn-primary" href="CadastrarAgendaTrabalho.html"><i class="icon-pencil"></i> Editar</a>
+                                  <a class="btn" href="#"><i class="icon-trash"></i> Excluir</a></div>
+                              </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                              <div class="span12">
+                                  <div class="span12"><p class="lead"> 24 Horas</p></div>
+                                  <div class="span12">
+                                  	<label>Períodos</label>
+                                      <div class="span5"><strong>Domingo</strong>
+                                      <p>00:00 a 23:59</p></div>
+                                      <div class="span5"><strong>Segunda-Feira</strong>
+                                      <p>00:00 a 23:59</p></div>
+                                      <div class="span5"><strong>Terça-Feira</strong>
+                                      <p>00:00 a 23:59</p></div>
+                                      <div class="span5"><strong>Quarta-Feira</strong>
+                                      <p>00:00 a 23:59</p></div>
+                                      <div class="span5"><strong>Quinta-Feira</strong>
+                                      <p>00:00 a 23:59</p></div>
+                                      <div class="span5"><strong>Sexta-Feira</strong>
+                                      <p>00:00 a 23:59</p></div>
+                                      <div class="span5"><strong>Sábado</strong>
+                                      <p>00:00 a 23:59</p></div>
+                                  </div>
+                                  <div class="span12"><a class="btn btn-primary" href="CadastrarAgendaTrabalho.html"><i class="icon-pencil"></i> Editar</a>
+                                  <a class="btn" href="#"><i class="icon-trash"></i> Excluir</a></div>
+                              </div>
+                          </td>
+                        </tr>
+						<tr>
+                          <td>
+                              <div class="span12">
+                                  <div class="span12"><p class="lead"> Turno da Noite</p></div>
+                                  <div class="span12">
+                                  	<label>Períodos</label>
+                                      <div class="span5"><strong>Segunda-Feira</strong>
+                                      <p>22:00 a 01:00<br/>02:00 a 06:00</p></div>
+                                      <div class="span5"><strong>Terça-Feira</strong>
+                                      <p>22:00 a 01:00<br/>02:00 a 06:00</p></div>
+                                      <div class="span5"><strong>Quarta-Feira</strong>
+                                      <p>22:00 a 01:00<br/>02:00 a 06:00</p></div>
+                                      <div class="span5"><strong>Quinta-Feira</strong>
+                                      <p>22:00 a 01:00<br/>02:00 a 06:00</p></div>
+                                      <div class="span5"><strong>Sexta-Feira</strong>
+                                      <p>22:00 a 01:00<br/>02:00 a 06:00</p></div>
+                                      <div class="span5"><strong>Sábado</strong>
+                                      <p>22:00 a 01:00</p></div>
+                                  </div>
+                                  <div class="span12"><a class="btn btn-primary" href="CadastrarAgendaTrabalho.html"><i class="icon-pencil"></i> Editar</a>
+                                  <a class="btn" href="#"><i class="icon-trash"></i> Excluir</a></div>
+                              </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table class="table table-hover table-striped hidden-phone">
+                      <thead>
+                        <tr>
+                          <th width="10%">Ação</th>
+                          <th width="13%">Agenda de Trabalho</th>
+                          <th width="11%">Domingo</th>
+                          <th width="11%">Segunda-Feira</th>
+                          <th width="11%">Terça-Feira</th>
+                          <th width="11%">Quarta-Feira</th>
+                          <th width="11%">Quinta-Feira</th>
+                          <th width="11%">Sexta-Feira</th>
+                          <th width="11%">Sábado</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><div class="btn-group">
+                                  <a class="btn btn-primary" href="#"> 51</a>
+                                  <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+                                  <ul class="dropdown-menu">
+                                    <li><a href="CadastrarAgendaTrabalho.html"><i class="icon-pencil"></i> Editar</a></li>
+                                    <li><a href="#"><i class="icon-trash"></i> Excluir</a></li>
+                                  </ul>
+                                </div>
+                            </td>
+                          <td>Padrão</td>
+                          <td></td>
+                          <td><p>08:00 a 12:00<br/>13:00 a 17:00</p></td>
+                          <td><p>08:00 a 12:00<br/>13:00 a 17:00</p></td>
+                          <td><p>08:00 a 12:00<br/>13:00 a 17:00</p></td>
+                          <td><p>08:00 a 12:00<br/>13:00 a 17:00</p></td>
+                          <td><p>08:00 a 12:00<br/>13:00 a 17:00</p></td>
+                          <td><p>08:00 a 12:00</p></td>
+                        </tr>
+                        <tr>
+                          <td><div class="btn-group">
+                                  <a class="btn btn-primary" href="#"> 55</a>
+                                  <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+                                  <ul class="dropdown-menu">
+                                    <li><a href="CadastrarAgendaTrabalho.html"><i class="icon-pencil"></i> Editar</a></li>
+                                    <li><a href="#"><i class="icon-trash"></i> Excluir</a></li>
+                                  </ul>
+                                </div>
+                            </td>
+                          <td>24 Horas</td>
+                          <td><p>00:00 a 23:59</p></td>
+                          <td><p>00:00 a 23:59</p></td>
+                          <td><p>00:00 a 23:59</p></td>
+                          <td><p>00:00 a 23:59</p></td>
+                          <td><p>00:00 a 23:59</p></td>
+                          <td><p>00:00 a 23:59</p></td>
+                          <td><p>00:00 a 23:59</p></td>
+                        </tr>
+                        <tr>
+                          <td><div class="btn-group">
+                                  <a class="btn btn-primary" href="#"> 63</a>
+                                  <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+                                  <ul class="dropdown-menu">
+                                    <li><a href="CadastrarAgendaTrabalho.html"><i class="icon-pencil"></i> Editar</a></li>
+                                    <li><a href="#"><i class="icon-trash"></i> Excluir</a></li>
+                                  </ul>
+                                </div>
+                            </td>
+                          <td>Turno da Noite</td>
+                          <td></td>
+                          <td><p>22:00 a 01:00<br/>02:00 a 06:00</p></td>
+                          <td><p>22:00 a 01:00<br/>02:00 a 06:00</p></td>
+                          <td><p>22:00 a 01:00<br/>02:00 a 06:00</p></td>
+                          <td><p>22:00 a 01:00<br/>02:00 a 06:00</p></td>
+                          <td><p>22:00 a 01:00<br/>02:00 a 06:00</p></td>
+                          <td><p>22:00 a 02:00</p></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div> <!-- /row-fluid marketing -->                  
+                  <div class="pagination pagination-centered">
+                    <ul>
+                      <li class="disabled"><a href="#">« Anterior</a></li>
+                      <li class="hidden-phone disabled"><a href="#">1</a></li>
+                      <li class="disabled"><a href="#">Próxima »</a></li>
+                    </ul>
+                  </div> <!-- /pagination pagination-centered -->
+                </div> <!-- /tab1 -->
+                
+                <div id="tab2" class="tab-pane">
+                  <p class="hidden-phone "><label><strong>1</strong> de <strong>1</strong> página de um total de <strong>1</strong> registro.</label></p>
+                  <div class="row-fluid"> 
+                    <table class="table table-hover table-striped hidden-desktop">
+                      <tbody>
+						<tr>
+                          <td>
+                              <div class="span12">
+                                  <div class="span12"><p class="lead"> Terceiro Turno</p></div>
+                                  <div class="span12">
+                                  	<label>Períodos</label>
+                                      <div class="span5"><strong>Segunda-Feira</strong>
+                                      <p>22:00 a 01:00<br/>03:00 a 06:00</p></div>
+                                      <div class="span5"><strong>Terça-Feira</strong>
+                                      <p>22:00 a 01:00<br/>03:00 a 06:00</p></div>
+                                      <div class="span5"><strong>Quarta-Feira</strong>
+                                      <p>22:00 a 01:00<br/>03:00 a 06:00</p></div>
+                                      <div class="span5"><strong>Quinta-Feira</strong>
+                                      <p>22:00 a 01:00<br/>03:00 a 06:00</p></div>
+                                      <div class="span5"><strong>Sexta-Feira</strong>
+                                      <p>22:00 a 01:00<br/>03:00 a 06:00</p></div>
+                                  </div>
+                                  <div class="span12"><a class="btn btn-primary" href="CadastrarAgendaTrabalho.html"><i class="icon-pencil"></i> Editar</a>
+                                  <a class="btn" href="#"><i class="icon-trash"></i> Excluir</a></div>
+                              </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>                     
+                    <table class="table table-hover table-striped hidden-phone ">
+                      <thead>
+                        <tr>
+                          <th width="10%">Ação</th>
+                          <th width="13%">Agenda de Trabalho</th>
+                          <th width="11%">Domingo</th>
+                          <th width="11%">Segunda-Feira</th>
+                          <th width="11%">Terça-Feira</th>
+                          <th width="11%">Quarta-Feira</th>
+                          <th width="11%">Quinta-Feira</th>
+                          <th width="11%">Sexta-Feira</th>
+                          <th width="11%">Sábado</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><div class="btn-group">
+                                  <a class="btn btn-primary" href="#"> 74</a>
+                                  <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+                                  <ul class="dropdown-menu">
+                                    <li><a href="CadastrarAgendaTrabalho.html"><i class="icon-pencil"></i> Editar</a></li>
+                                    <li><a href="#"><i class="icon-trash"></i> Excluir</a></li>
+                                  </ul>
+                                </div>
+                            </td>
+                          <td>Padrão</td>
+                          <td></td>
+                          <td><p>22:00 a 01:00<br/>03:00 a 06:00</p></div></td>
+                          <td><p>22:00 a 01:00<br/>03:00 a 06:00</p></div></td>
+                          <td><p>22:00 a 01:00<br/>03:00 a 06:00</p></div></td>
+                          <td><p>22:00 a 01:00<br/>03:00 a 06:00</p></div></td>
+                          <td><p>22:00 a 01:00<br/>03:00 a 06:00</p></div></td>
+                          <td></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div> <!-- /row-fluid -->
+                  <div class="pagination pagination-centered">
+                    <ul>
+                      <li class="disabled"><a href="#">« Anterior</a></li>
+                      <li class="hidden-phone disabled"><a href="#">1</a></li>
+                      <li class="disabled"><a href="#">Próxima »</a></li>
+                    </ul>
+                  </div> <!-- /pagination pagination-centered -->
+                </div> <!-- /tab2 -->
+                
+              </div><!-- Painéis -->
+          </div><!-- /tabbable -->        
+           
+      	</fieldset>
+          
+      </div> <!-- /row-fluid -->
+
+      </div><!-- /container -->
+      </form>
+         <div id="push"></div>
+  <div id="footer">
+      <div class="container">
+      	<div class="row-fluid">
+            <div class="span2">
+    	        <p class="muted credit">&copy; <a class="navbar-link" href="http://www.bancodoc.com.br">Bancodoc</a> - 2014</p>
+                <p class="muted credit"><a  title="Site Blindado" href="#"><img src="App_Themes/Padrao/img/siteblindado.gif" border="0"></a> </p>
+                <p class="muted credit">
+                    <div id="thawteseal" style="text-align:left;" title="Clique e verifique - Este site escolheu Thawte SSL para realizar comunicações seguras.">
+                    <div><script type="text/javascript" src="https://seal.thawte.com/getthawteseal?host_name=ssl-w08dnn0378.websiteseguro.com&amp;size=M&amp;lang=br"></script></div>
+                </div></p>
+            </div> <!-- /span1 -->
+            
+            <div class="span3 visible-desktop">
+            	<div class="row-fluid">
+                	<p class="muted credit">
+                    	<blockquote>
+                        <ul class="nav nav-list">
+                          <li class="nav-header">Bancodoc</li>
+                          <li><a class="navbar-link" href="Default.html">Home</a></li>
+                          <li><a class="navbar-link" href="GrupoDemarco.html">Grupo Demarco</a></li>
+                          <li><a class="navbar-link" href="AgendaObrigacoes.html">Agenda de Obrigações</a></li>
+                          <li><a class="navbar-link" href="GestaoInformacoesDocumentos.html">Gestão de Informações e Documentos</a></li>
+                        </ul>
+                        </blockquote>
+                    </p>
+                </div> <!-- /row-fluid -->
+            </div> <!-- /span3 -->
+            
+            <div class="span3 visible-desktop">
+            	<div class="row-fluid">
+                	<p class="muted credit">
+                    <blockquote>
+                        <ul class="nav nav-list">
+                          <li class="nav-header">Segurança</li>
+                          <li><a class="navbar-link" href="ManutenirUsuario.html">Usuários</a></li>
+                          <li><a class="navbar-link" href="CofigurarAgendaTrabalho.html">Agenda de Trabalho</a></li>
+                          <li><a class="navbar-link" href="ConfigurarPerfilAcesso.html">Perfis de Acesso</a></li>
+                          <li class="divider"></li>
+                          <li><a class="navbar-link" href="ManutenirModulo.html">Módulos</a></li>
+                          <li><a class="navbar-link" href="ManutenirFuncionalidade.html">Funcionalidades</a></li>
+                          <li><a class="navbar-link" href="ManutenirAcao.html">Ações</a></li>
+                          <li><a class="navbar-link" href="ManutenirObjeto.html">Objetos</a></li>
+                        </ul>
+                        </blockquote>
+
+                    </p>
+                </div> <!-- /row-fluid -->
+            </div> <!-- /span3 -->
+            
+            <div class="span3 visible-desktop">
+            	<div class="row-fluid">
+                	<p class="muted credit">
+                    <blockquote>
+                        <ul class="nav nav-list">
+                          <li class="nav-header">Configurações</li>
+                          <li><a class="navbar-link" href="ManterParametro.html">Tabelas de Parâmetros</a></li>
+                          <li><a class="navbar-link" href="ManterOcorrencia.html">Tabelas Auxíliares</a></li>
+                          <li><a class="navbar-link" href="ManterNotificacao.html">Notificações</a></li>
+                        </ul>
+                        </blockquote>
+                    </p>
+                </div> <!-- /row-fluid -->
+            </div> <!-- /span3 -->
+            
+            <div class="span1  visible-desktop">
+    	        <p class="muted credit"><a  title="Grupo Demarco" href="www.demarco.com.br" target="_blank"><img src="App_Themes/Padrao/img/logoDemarco.png" border="0"></a></p>
+                <p class="muted credit"><a  title="Inforweb" href="www.inforweb.com.br" target="_blank"><img src="App_Themes/Padrao/img/logoInforweb.png" border="0"></a></p>
+                <p class="muted credit"><a  title="Gente e Gestão" href="www.gentegestao.com.br" target="_blank"><img src="App_Themes/Padrao/img/logoGenteGestao.png" border="0"></a></p>
+            </div> <!-- /span1 -->
+            
+        </div><!-- /row-fluid -->
+      </div><!-- /container -->
+    </div><!-- /footer -->
+  </div> <!-- /Wrap -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Excluir o que não for utilizar na página atual... -->
+	<script src="App_Themes/Padrao/js/jquery.js"></script>
+    <script src="App_Themes/Padrao/js/bootstrap-transition.js"></script>
+    <script src="App_Themes/Padrao/js/bootstrap-alert.js"></script>
+    <script src="App_Themes/Padrao/js/bootstrap-modal.js"></script>
+    <script src="App_Themes/Padrao/js/bootstrap-dropdown.js"></script>
+    <script src="App_Themes/Padrao/js/bootstrap-scrollspy.js"></script>
+    <script src="App_Themes/Padrao/js/bootstrap-tab.js"></script>
+    <script src="App_Themes/Padrao/js/bootstrap-tooltip.js"></script>
+    <script src="App_Themes/Padrao/js/bootstrap-popover.js"></script>
+    <script src="App_Themes/Padrao/js/bootstrap-button.js"></script>
+    <script src="App_Themes/Padrao/js/bootstrap-collapse.js"></script>
+    <script src="App_Themes/Padrao/js/bootstrap-carousel.js"></script>
+    <script src="App_Themes/Padrao/js/bootstrap-typeahead.js"></script>
+
+  </body>
+</html>
+

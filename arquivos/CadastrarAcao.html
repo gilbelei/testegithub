@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <title>.:: Bancodoc ::.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bancodoc - É um sistema que permite o controle de documentos trabalhistas, todos os documentos funcionais passam a ser armazenados e monitorados digitalmente.">
+    <meta name="author" content="Inforweb Sistemas e Serviços">
+
+    <!-- Le styles -->
+    <link href="App_Themes/Padrao/css/bootstrap.css" rel="stylesheet">
+    <!-- CLASSE DE ESTILO CUSTOMIZADA -->
+    <link href="App_Themes/Padrao/css/bootstrap-bancodoc.css" rel="stylesheet">
+    
+    <style type="text/css">
+      body {
+        padding-top: 90px;
+        padding-bottom: 10px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+
+      @media (max-width: 980px) {
+        /* Enable use of floated navbar text */
+        .navbar-text.pull-right {
+          float: none;
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+      }
+    </style>
+    <link href="App_Themes/Padrao/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="App_Themes/Padrao/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="App_Themes/Padrao/img/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="App_Themes/Padrao/img/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="App_Themes/Padrao/img/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="App_Themes/Padrao/img/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="App_Themes/Padrao/img/favicon.png">
+                                   <script type="text/javascript">
+<!--
+function MM_goToURL() { //v3.0
+  var i, args=MM_goToURL.arguments; document.MM_returnValue = false;
+  for (i=0; i<(args.length-1); i+=2) eval(args[i]+".location='"+args[i+1]+"'");
+}
+//-->
+                                   </script>
+</head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- INSERIDO POR GIL.BELEI EM 13.05..2013 -->
+          <div id="logomarca" class="visible-desktop">
+          	<a href="Default.html" target="_top"><img src="App_Themes/Padrao/img/LogoBancodoc.png" alt="Bancodoc" border="0" longdesc="http://www.bancodoc.com.br"></a>
+          </div>
+          <div id="logomarca-mini" class="hidden-desktop">
+          	<a href="Default.html" target="_top"><img src="App_Themes/Padrao/img/LogoMiniBancodoc.png" alt="Bancodoc" border="0" longdesc="http://www.bancodoc.com.br"></a>
+          </div>
+          <!-- ALTERADO POR GIL.BELEI EM 13.05..2013 
+          <a class="brand" href="Default.html">Bancodoc</a>-->
+          <div class="nav-collapse collapse">
+            <div class="btn-group pull-right visible-desktop">
+              <a class="btn btn-inverse" href="#"><i class="icon-user icon-white"></i> {Nome do Usuário}</a>
+              <a class="btn btn-inverse dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="AlterarDadosAcesso.html"><i class="icon-pencil"></i> Editar</a></li>
+                <li><a href="Default.html"><i class="icon-ban-circle"></i> Sair</a></li>
+                <li class="divider"></li>
+                <li><a href="Default.html">Home</a></li>
+              </ul>
+            </div>               
+            
+            <ul class="nav">
+            
+            <li class="dropdown ">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Segurança <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="ManutenirUsuario.html">Usuários</a></li>
+                  <li><a href="CofigurarAgendaTrabalho.html">Agenda de Trabalho</a></li>
+                  <li><a href="ConfigurarPerfilAcesso.html">Perfis de Acesso</a></li>
+                  <li class="divider"></li>
+                  <li><a href="ManutenirModulo.html">Módulos</a></li>
+                  <li><a href="ManutenirFuncionalidade.html">Funcionalidades</a></li>
+                  <li><a href="ManutenirAcao.html">Ações</a></li>
+                  <li><a href="ManutenirObjeto.html">Objetos</a></li>
+                </ul>
+              </li>
+              
+              <li class="dropdown ">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Configurações <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="ManterParametro.html">Tabelas de Parâmetros</a></li>
+                  <li><a href="ManterOcorrencia.html">Tabelas Auxíliares</a></li>
+                  <li><a href="ManterNotificacao.html">Notificações</a></li>
+                </ul>
+              </li>
+              
+              
+              
+              <li class="dropdown hidden-desktop">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">{Nome do Usuário}<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="AlterarDadosAcesso.html"><i class="icon-pencil"></i> Editar</a></li>
+                    <li><a href="Default.html"><i class="icon-ban-circle"></i> Sair</a></li>
+                </ul>
+              </li>
+              
+            </ul>            
+          </div><!--/.nav-collapse -->
+          
+        </div><!-- /container-fluid-->
+      </div><!-- /navbar-inner -->
+     	 <!-- INSERIDO POR GIL.BELEI EM 13.05..2013 -->
+      	<div class="row-fluid visible-desktop">
+        	<div class="span9">
+              <ul class="breadcrumb">
+                <li><a href="Default.html">Bancodoc</a> <span class="divider">»</span></li>
+                  <li><a href="Seguranca.html">Segurança</a> <span class="divider">»</span></li>
+                  <li class="active">Cadastrar Ação</li>
+                </ul>	
+            </div>
+            <div class="span3">
+            	
+            	<div class="span6">13 de maio de 2013 17:47</div>
+          	</div>
+        </div>
+    </div> <!-- /navbar navbar-inverse navbar-fixed-top -->
+    
+    <!-- Part 1: Wrap all page content here -->
+	<div id="wrap">
+	<form action="ManutenirAcao.html" method="post">    
+    <div class="container"> <!-- Ou class="container-fluid" -->
+      <div class="row-fluid">
+        <h1 class="hidden-phone">Cadastrar Ação</h1>
+        <p class="hidden-phone">Utilize o formulário abaixo para cadastrar um nova ação do sistema. Preencha os dados conforme solicitado e clique no botão cadastrar para concluir o cadastro.</p>
+        <fieldset>
+        <legend>Dados da Ação</legend>
+
+            <div class="row-fluid">
+                <div class="span6"><label>Título</label><input class="input-xlarge" type="text"  placeholder="Título…" required></div> 
+                <div class="span6"><label>Nome</label><input class="input-large" type="text"  placeholder="Nome…" required>
+                    <div class="alert alert-info">
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        Não utilize espaço, acentos ou caracteres especiais.
+                    </div>
+                </div>
+            </div><!-- /row-fluid --> 
+            
+            <div class="row-fluid">
+                <div class="span6">
+                    <div class="row-fluid"><label>Cadastro</label><input class="input-medium" type="text" value="01/05/2013 08:25"   readonly></div>  
+                    <div class="row-fluid"><label>Última Alteração</label><input class="input-medium" type="text" value="14/05/2013 14:11"   readonly> 
+                    <a title="Visualizar Log..." data-toggle="modal" href="#myModal" class="btn btn-primary btn-mini" ><i class="icon-eye-open"></i></a></div>
+                </div>
+                <div class="span6">
+                    <div class="row-fluid"><label>Excluído</label><input class="input-medium" type="text"   readonly></div>  
+                    <div class="row-fluid">
+                    	<label>Visível?</label><label class="checkbox"><input type="checkbox" value="Sim" checked>Sim</label>
+                    </div>
+                </div>                
+            </div><!-- /row-fluid --> 
+            
+            
+            <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                  <h3 id="myModalLabel">Log de Alterações</h3>
+                </div>
+                <div class="modal-body">
+                	<p class="text-success">01/05/2013 08:25 (gil.belei) - Ação cadastrada.</p>
+                    <p class="muted">01/05/2013 14:05 (misael.nazario) - Ação visualizada.</p>
+                    <p class="muted">02/05/2013 12:45 (rodrigo.lara) - Ação visualizada.</p>
+                    <p class="text-warning">02/05/2013 12:53 (rodrigo.lara) - Ação alterada.</p>
+                    <p class="muted">02/05/2013 15:23 (misael.nazario) - Ação visualizada.</p>
+                    <p class="muted">02/05/2013 15:46 (gil.belei) - Ação visualizada.</p>
+                    <p class="text-info">02/05/2013 15:59 (gil.belei) - Ação desabilitada.</p>
+                    <p class="text-error">02/05/2013 16:06 (gil.belei) - Ação excluída.</p>
+                </div>
+                <div class="modal-footer">
+                  <button class="btn" data-dismiss="modal">Fechar</button>
+                  <button class="btn btn-success" data-dismiss="modal">Exportar</button>
+                </div>
+              </div><!-- /myModal -->
+            
+            <div class="row-fluid"> 
+                <div class="span10 offset1">
+                    <fieldset>
+                    <legend>Perfis de Acesso</legend>        
+                        <div class="span4"><label class="checkbox"><input type="checkbox" value="">Administrador</label></div> 
+                        <div class="span6"> 
+                                <select required class="span4">
+                                      <option value="1" selected>Escrita</option>
+                                      <option value="2">Leitura</option>
+                                      <option value="3">Nenhum</option>
+                                </select>
+                            </div><!-- /span4 --> 
+                        <div class="span4"><label class="checkbox"><input type="checkbox" value="">Bancodoc - Gerente </label></div> 
+                        <div class="span6"> 
+                                <select required class="span4">
+                                      <option value="1" selected>Escrita</option>
+                                      <option value="2">Leitura</option>
+                                      <option value="3">Nenhum</option>
+                                </select>
+                            </div><!-- /span4 --> 
+                        <div class="span4"><label class="checkbox"><input type="checkbox" value="">Bancodoc - Coordenador </label></div> 
+                        <div class="span6"> 
+                                <select required class="span4">
+                                      <option value="1" selected>Escrita</option>
+                                      <option value="2">Leitura</option>
+                                      <option value="3">Nenhum</option>
+                                </select>
+                            </div><!-- /span4 --> 
+                        <div class="span4"><label class="checkbox"><input type="checkbox" value="">Bancodoc - Analista </label></div> 
+                        <div class="span6"> 
+                                <select required class="span4">
+                                      <option value="1" selected>Escrita</option>
+                                      <option value="2">Leitura</option>
+                                      <option value="3">Nenhum</option>
+                                </select>
+                            </div><!-- /span4 --> 
+                    </fieldset>
+                </div><!-- /span8 offset1 -->
+           </div><!-- /row-fluid --> 
+    
+           <div class="row-fluid">
+               <div class="span12 form-actions"><button type="button" class="btn" onClick="MM_goToURL('parent','ManutenirAcao.html');return document.MM_returnValue" >Cancelar</button> <button type="submit" class="btn btn-primary btn-large" >Cadastrar</button> 
+             </div>
+           </div><!-- /row-fluid --> 
+           
+      	</fieldset>
+          
+      </div> <!-- /row-fluid -->
+
+      </div><!-- /container -->
+      </form>
+         <div id="push"></div>
+  <div id="footer">
+      <div class="container">
+      	<div class="row-fluid">
+            <div class="span2">
+    	        <p class="muted credit">&copy; <a class="navbar-link" href="http://www.bancodoc.com.br">Bancodoc</a> - 2014</p>
+                <p class="muted credit"><a  title="Site Blindado" href="#"><img src="App_Themes/Padrao/img/siteblindado.gif" border="0"></a> </p>
+                <p class="muted credit">
+                    <div id="thawteseal" style="text-align:left;" title="Clique e verifique - Este site escolheu Thawte SSL para realizar comunicações seguras.">
+                    <div><script type="text/javascript" src="https://seal.thawte.com/getthawteseal?host_name=ssl-w08dnn0378.websiteseguro.com&amp;size=M&amp;lang=br"></script></div>
+                </div></p>
+            </div> <!-- /span1 -->
+            
+            <div class="span3 visible-desktop">
+            	<div class="row-fluid">
+                	<p class="muted credit">
+                    	<blockquote>
+                        <ul class="nav nav-list">
+                          <li class="nav-header">Bancodoc</li>
+                          <li><a class="navbar-link" href="Default.html">Home</a></li>
+                          <li><a class="navbar-link" href="GrupoDemarco.html">Grupo Demarco</a></li>
+                          <li><a class="navbar-link" href="AgendaObrigacoes.html">Agenda de Obrigações</a></li>
+                          <li><a class="navbar-link" href="GestaoInformacoesDocumentos.html">Gestão de Informações e Documentos</a></li>
+                        </ul>
+                        </blockquote>
+                    </p>
+                </div> <!-- /row-fluid -->
+            </div> <!-- /span3 -->
+            
+            <div class="span3 visible-desktop">
+            	<div class="row-fluid">
+                	<p class="muted credit">
+                    <blockquote>
+                        <ul class="nav nav-list">
+                          <li class="nav-header">Segurança</li>
+                          <li><a class="navbar-link" href="ManutenirUsuario.html">Usuários</a></li>
+                          <li><a class="navbar-link" href="CofigurarAgendaTrabalho.html">Agenda de Trabalho</a></li>
+                          <li><a class="navbar-link" href="ConfigurarPerfilAcesso.html">Perfis de Acesso</a></li>
+                          <li class="divider"></li>
+                          <li><a class="navbar-link" href="ManutenirModulo.html">Módulos</a></li>
+                          <li><a class="navbar-link" href="ManutenirFuncionalidade.html">Funcionalidades</a></li>
+                          <li><a class="navbar-link" href="ManutenirAcao.html">Ações</a></li>
+                          <li><a class="navbar-link" href="ManutenirObjeto.html">Objetos</a></li>
+                        </ul>
+                        </blockquote>
+
+                    </p>
+                </div> <!-- /row-fluid -->
+            </div> <!-- /span3 -->
+            
+            <div class="span3 visible-desktop">
+            	<div class="row-fluid">
+                	<p class="muted credit">
+                    <blockquote>
+                        <ul class="nav nav-list">
+                          <li class="nav-header">Configurações</li>
+                          <li><a class="navbar-link" href="ManterParametro.html">Tabelas de Parâmetros</a></li>
+                          <li><a class="navbar-link" href="ManterOcorrencia.html">Tabelas Auxíliares</a></li>
+                          <li><a class="navbar-link" href="ManterNotificacao.html">Notificações</a></li>
+                        </ul>
+                        </blockquote>
+                    </p>
+                </div> <!-- /row-fluid -->
+            </div> <!-- /span3 -->
+            
+            <div class="span1  visible-desktop">
+    	        <p class="muted credit"><a  title="Grupo Demarco" href="www.demarco.com.br" target="_blank"><img src="App_Themes/Padrao/img/logoDemarco.png" border="0"></a></p>
+                <p class="muted credit"><a  title="Inforweb" href="www.inforweb.com.br" target="_blank"><img src="App_Themes/Padrao/img/logoInforweb.png" border="0"></a></p>
+                <p class="muted credit"><a  title="Gente e Gestão" href="www.gentegestao.com.br" target="_blank"><img src="App_Themes/Padrao/img/logoGenteGestao.png" border="0"></a></p>
+            </div> <!-- /span1 -->
+            
+        </div><!-- /row-fluid -->
+      </div><!-- /container -->
+    </div><!-- /footer -->
+  </div> <!-- /Wrap -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Excluir o que não for utilizar na página atual... -->
+	<script src="App_Themes/Padrao/js/jquery.js"></script>
+    <script src="App_Themes/Padrao/js/bootstrap-transition.js"></script>
+    <script src="App_Themes/Padrao/js/bootstrap-alert.js"></script>
+    <script src="App_Themes/Padrao/js/bootstrap-modal.js"></script>
+    <script src="App_Themes/Padrao/js/bootstrap-dropdown.js"></script>
+    <script src="App_Themes/Padrao/js/bootstrap-scrollspy.js"></script>
+    <script src="App_Themes/Padrao/js/bootstrap-tab.js"></script>
+    <script src="App_Themes/Padrao/js/bootstrap-tooltip.js"></script>
+    <script src="App_Themes/Padrao/js/bootstrap-popover.js"></script>
+    <script src="App_Themes/Padrao/js/bootstrap-button.js"></script>
+    <script src="App_Themes/Padrao/js/bootstrap-collapse.js"></script>
+    <script src="App_Themes/Padrao/js/bootstrap-carousel.js"></script>
+    <script src="App_Themes/Padrao/js/bootstrap-typeahead.js"></script>
+
+  </body>
+</html>
+
